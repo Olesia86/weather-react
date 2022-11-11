@@ -1,0 +1,155 @@
+.container {
+  width: 700px;
+  height: 650px;
+  margin: 0 auto;
+  padding: 0 auto;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px;
+  font-family: fantasy;
+  color: black;
+  background-color: rgb(197, 195, 200);
+
+
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  
+}
+button {
+border-radius: 18px;
+border: black;
+padding-top: 44px;
+margin-right: 300px;
+width: 4rem;
+font-size: 18px;
+outline: none;
+}
+
+button:hover {
+  opacity: 0.9;
+  box-shadow: 0 5px 15px;
+  color: black;
+}
+button:focus {
+  outline: none;
+}
+
+#glass {
+  color: black;
+  outline: none;
+  font-size: 30px;
+}
+
+.search-bar {
+border-radius: 18px;
+padding: 0.7rem;
+border: none;
+color: white;
+background: (rgb(2, 2, 109));
+outline: none;
+}
+.search-bar:hover {
+  opacity: 0.9;
+  box-shadow: 0 5px 15px;
+  color: black;
+}
+h1 {
+  color: rgb(207, 189, 208);
+  padding: 0;
+  position: relative;
+  left: 400px;
+  font-size: 150px;
+  line-height: 1;
+  margin: 0;
+} 
+
+h2 {
+  font-size: 36px;
+  padding-left: 40px;
+}
+h3 {
+  position: relative;
+  font-size: 12px;
+  left: 70px;
+  bottom: 13px;
+}
+h5 {
+position: relative;
+left: 550px;
+bottom: 120px;
+font-size: 30px;
+line-height: 1;
+margin: 0;
+padding: 0;
+}
+.weatherDescription {
+  margin-top: -50px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+.card-title {
+  color: black;
+  font-size: 18px;
+
+  }
+  
+.row {
+  display: flex;
+  max-width: 760px;
+  margin-right: 30px;
+ }
+
+ #main-icon {
+    width: 100px;
+    margin-bottom: 40px;
+  }
+  .main-temp {
+    font-size: 30px;
+    margin-left: -15px;
+  }
+.card {
+  width: 7.2rem;
+  height: 10rem;
+  color: black;
+  font-size: 12px;
+  box-shadow: 0 5px 15px;
+  border: none;
+  margin-left: 10px;
+  }
+.card-body {
+  border: none;
+  height: 10rem;
+  width: 7.7rem;
+
+}
+.card-body:hover {
+ opacity: 0.9;
+ box-shadow: 0 5px 15px;
+ color: white;
+border-radius: 18px;
+}
+.icon {
+  max-width: 45px;
+  padding: 4px; 
+  margin-top: -15px;
+  margin-left: 22px;
+}
+.days {
+  font-size: 20px;
+  padding: 0 15px;
+}
+.card-text {
+  text-align: center;
+  color: black;
+}
+.temp {
+  text-align: center;
+  margin-top: -10px;
+  color: black;
+}
