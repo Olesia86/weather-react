@@ -9,19 +9,19 @@ export default function App() {
   
   return (
     <div className="App">
-  <div className="container">
-<CitySearchEngine />
-  <Weather />
-  <WeatherDescription />
-  <br />
-  <Forecast />
-  </div>
-</div>
-);
+      <div className="container">
+        <CitySearchEngine />
+        <Weather />
+        <WeatherDescription />
+        <br />
+        <Forecast />
+      </div>
+    <div className="link">
+    <a href="https://github.com/Olesia86/weather-react">Open source</a>
+      </div>
+      </div>
+  );
 }
-<div>
-  <a href="https://github.com/Olesia86/weather-react">Open source</a>
-</div>
 
 
 
