@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 
  
-export default function CitySearchEngine (props) {
-let [city, setCity] = useState(props.city);
+export default function CitySearchEngine() {
 
-  function handleSubmit(event) {
-event.preventDefault();
-setCity(props.city);
-  }
 return (
-<form onSubmit={handleSubmit} id="search">
+<form onSubmit="handleSubmit" id="search">
 <div className="search">
   <input type="text"
   className="search-bar"
