@@ -1,5 +1,5 @@
 .container {
-  width: 700px;
+  width: 600px;
   height: 650px;
   margin: 0 auto;
   padding: 0 auto;
@@ -9,10 +9,7 @@
   font-family: fantasy;
   color: black;
   background-color: rgb(197, 195, 200);
-
-
 }
-
 .search {
   display: flex;
   align-items: center;
