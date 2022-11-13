@@ -19,6 +19,9 @@ export default function App() {
 </div>
 );
 }
+<div>
+  <a href="https://github.com/Olesia86/weather-react">Open source</a>
+</div>
 
 
 
