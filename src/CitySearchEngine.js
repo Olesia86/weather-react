@@ -1,4 +1,6 @@
+
 import React from "react";
+
 
 
  
@@ -14,10 +16,7 @@ return (
   autocomplete="off"
   autofocus="on"
   id="search-text-bar"/>
-  <button>
-  <i className="fa-solid fa-magnifying-glass search-glass" id="glass"></i>
-  </button>
-</div>
+  </div>
 </form>
 );
 }
