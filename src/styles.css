@@ -1,6 +1,7 @@
-.container {
-  max-width: 540px;
+.Container {
+  max-width: 760px;
   height: 650px;
+  margin-left: 150px;
   padding: 0 auto;
   border: none;
   border-radius: 20px;
@@ -15,29 +16,24 @@
   padding: 10px;
   margin: 10px;
   }
-button {
-border-radius: 20px;
-border: black;
-padding-top: 44px;
-margin-right: 300px;
-width: 4rem;
-font-size: 18px;
-outline: none;
-}
+.button {
+  border-radius: 18px;
+  padding: 0.7rem;
+  border: none;
+  color: rgb(19, 18, 18);
+  background: (rgb(2, 2, 109));
+  outline: none;
+  margin-left: 10px;
+  }
 
-button:hover {
+.button:hover {
   opacity: 0.9;
   box-shadow: 0 5px 15px;
   color: black;
 }
-button:focus {
+.button:focus {
   outline: none;
-}
-
-#glass {
-  color: black;
-  outline: none;
-  font-size: 30px;
+  
 }
 
 .search-bar {
@@ -148,6 +144,6 @@ border-radius: 18px;
   color: black;
 }
 .link {
-  text-align: center;
+  margin-left: 500px;
   font-size: 15px;
 }

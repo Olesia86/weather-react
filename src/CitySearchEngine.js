@@ -15,7 +15,8 @@ return (
   onCharge="updateCity"
   autocomplete="off"
   autofocus="on"
-  id="search-text-bar"/>
+        id="search-text-bar" />
+      <input type="submit" className="button" value="🔍" />
   </div>
 </form>
 );
