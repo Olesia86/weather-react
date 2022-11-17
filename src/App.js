@@ -6,14 +6,16 @@ import CitySearchEngine from "./CitySearchEngine";
 
 
 
+
+
 export default function App() {
   
   return (
     <div className="App">
       <div className="Container">
         <CitySearchEngine />
+        <Weather defaultCity="Kiev" />
         
-        <Weather defaultCity="London" />
         <br />
         <Forecast />
         </div>
