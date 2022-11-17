@@ -1,7 +1,6 @@
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Weather from "./Weather";
-import WeatherDescription from "./WeatherDescription";
 import Forecast from "./Forecast";
 import CitySearchEngine from "./CitySearchEngine";
 
@@ -13,8 +12,8 @@ export default function App() {
     <div className="App">
       <div className="Container">
         <CitySearchEngine />
-        <Weather />
-        <WeatherDescription />
+        
+        <Weather defaultCity="London" />
         <br />
         <Forecast />
         </div>

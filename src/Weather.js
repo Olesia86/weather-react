@@ -3,35 +3,49 @@ import axios from "axios";
 
 
 
-export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  
   
   function handelResponse(response) {
-    setTemperature(response.data.main.temp);
-    console.log(response)
-    setReady(true);
+  console.log(response.data);
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      date: "Monday 10:00",
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      wind: response.data.wind.speed,
+      city: response.data.name
+    });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
-        <h2 className="city">London</h2>
-        <h3 className="day">Monday 4 July</h3>
+        <h2 className="city">{weatherData.city}</h2>
+        <h3 className="day">{weatherData.date}</h3>
+        <h4 className="description">{weatherData.description}</h4>
         <h1>
-          <img src="./images/sunny.png" alt="Clear" id="main-icon" />
+          <img src={weatherData.iconUrl} alt={weatherData.description} id="main-icon" />
         </h1>
         <h5>
-          <div className="main-temp">23</div>
+          <div className="main-temp">{Math.round(weatherData.temperature)} C°</div>
         </h5>
-      </div>
+      
+       <div className="weatherDescription">
+          <div className="humidity">Humidity: {weatherData.humidity}%</div>
+          <div className="wind">Wind: {Math.round(weatherData.wind)} km/h</div>
+        </div>
+        </div>
     );
   }
   else {
-    const apiKey = "tab36a5o3f60c5bc9a40fad2cb676eba";
-    let city = "London";
+    const apiKey = "49299905f177ecc5c9f1da6f89238e56";
+    
     let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${London}&key=${key}&units=metric`;
-    axios.get(apiUri).then(handelResponse);
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handelResponse);
     return "Loading...";
   }
 }
