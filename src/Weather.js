@@ -6,21 +6,21 @@ import WeatherInfo from "./WeatherInfo";
 
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
+  let [weatherData, setWeatherData] = useState({ ready: false });
+  let [city, setCity] = useState(props.defaultCity);
   
   function handleResponse(response) {
-  console.log(response.data);
+
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      date: new Date(response.data.coord.dt),
-      iconUrl: response.data.weather[0].icon,
+      date: new Date(response.data.dt),
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.wearher[0].icon}10d@2x.png`,
       wind: response.data.wind.speed,
-      city: response.data.main.name,
+      city: response.data.name
     });
   } 
   function handleSubmit(event) {
@@ -41,14 +41,12 @@ export default function Weather(props) {
     return (
       <div className="Weather">
       <form onSubmit={handleSubmit} id="search">
-<input type="text"
+<input type="search"
   className="search-bar"
-  placeholder="Search for city"
-  onCharge={handleCitySearch}
-  autocomplete="off"
-  autofocus="on"
-  id="search-text-bar" />
-          <input type="submit" className="button" value="🔍" />
+            placeholder="Search for city"
+            autofocus="on"
+       onCharge={handleCitySearch} id="search-text-bar" />
+          <input type="submit" className="button" value="Search" />
           </form >
           <WeatherInfo data={weatherData} />
    </div>
