@@ -30,9 +30,9 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function search() {
-    let apiKey = "49299905f177ecc5c9f1da6f89238e56";
+    let apiKey = "1c28ad1c714e36e7ae4efd89bb91230a";
     let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
   
@@ -47,9 +47,9 @@ export default function Weather(props) {
   autocomplete="off"
   autofocus="on"
   id="search-text-bar" />
-   <input type="submit" className="button" value="🔍" />
-        </form >
-        <WeatherInfo data={weatherData} />
+          <input type="submit" className="button" value="🔍" />
+          </form >
+          <WeatherInfo data={weatherData} />
    </div>
     );
   }
