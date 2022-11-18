@@ -13,13 +13,14 @@ export default function Weather(props) {
   console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      date: new Date(response.data.dt * 1000),
+      date: new Date(response.data.coord.dt),
       iconUrl: response.data.weather[0].icon,
       wind: response.data.wind.speed,
-      city: response.data.name
+      city: response.data.main.name
     });
   } 
   function handleSubmit(event) {
