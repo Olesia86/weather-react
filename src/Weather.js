@@ -17,8 +17,8 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      date: new Date(response.data.dt),
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}10d@2x.png`,
+      date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name
     });
@@ -32,8 +32,7 @@ export default function Weather(props) {
   }
   function search() {
     let apiKey = "1c28ad1c714e36e7ae4efd89bb91230a";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
   
@@ -41,11 +40,11 @@ export default function Weather(props) {
     return (
       <div className="Weather">
       <form onSubmit={handleSubmit} id="search">
-<input type="search"
+        <input type="search"
   className="search-bar"
             placeholder="Search for city"
-            autofocus="on"
-       onCharge={handleCitySearch} id="search-text-bar" />
+            autoFocus="on"
+            onChange={handleCitySearch} id="search-text-bar" />
           <input type="submit" className="button" value="Search" />
           </form >
           <WeatherInfo data={weatherData} />

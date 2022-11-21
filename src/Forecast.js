@@ -22,7 +22,7 @@ export default function Forecast() {
     <div className="col-2">
     <div className="card">
     <div className="card-body">
-       <h6 class="card-title">We 6 July</h6>
+       <h6 className="card-title">We 6 July</h6>
       <p className="card-text">Partly cloudy</p>
       <p className="temp">24°C</p>
    <p>

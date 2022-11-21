@@ -23,8 +23,10 @@
     "npm": "^8.19.3",
     "nth-check": "^2.1.1",
     "react": "^18.2.0",
+    "react-animated-weather": "^4.0.1",
     "react-dom": "^18.2.0",
     "react-fontawesome-svg-icon": "^1.1.2",
+    "react-hook-geolocation": "^1.1.0",
     "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
     "svgo": "^3.0.1",
@@ -42,10 +44,10 @@
       "react-app",
       "react-app/jest"
     ]
-},
-"rules": {
-  "no-unused-vars": "off"
-},
+  },
+  "rules": {
+    "no-unused-vars": "off"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
