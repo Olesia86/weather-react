@@ -1,6 +1,6 @@
 .Container {
   max-width: 760px;
-  height: 600px;
+  height: 620px;
   margin-left: 150px;
   padding: 0 auto;
   border: none;
@@ -115,10 +115,10 @@ padding: 0;
 
  #main-icon {
     width: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
   }
   .main-temp {
-    font-size: 30px;
+    font-size: 40px;
     margin-left: -15px;
   }
 .card {
