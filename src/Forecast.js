@@ -41,7 +41,7 @@ export default function Forecast(props) {
           <div className="col-2">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{forecast[1].dt}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[1].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[1].temp.day)}°C</p>
                 <p>
@@ -53,7 +53,7 @@ export default function Forecast(props) {
           <div className="col-2">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{forecast[2].dt}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[2].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[2].temp.day)}°C</p>
                 <p>
@@ -65,7 +65,7 @@ export default function Forecast(props) {
           <div className="col-2">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{forecast[3].dt}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[3].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[3].temp.day)}°C</p>
                 <p>
@@ -77,7 +77,7 @@ export default function Forecast(props) {
           <div className="col-2">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{forecast[4].dt}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[4].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[4].temp.day)}°C</p>
                 <p>
@@ -89,7 +89,7 @@ export default function Forecast(props) {
           <div className="col-2">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{forecast[5].dt}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[5].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[5].temp.day)}°C</p>
                 <p>
