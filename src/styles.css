@@ -146,11 +146,12 @@ border-radius: 18px;
   max-width: 45px;
   padding: 4px; 
   margin-top: -15px;
-  margin-left: 22px;
+  margin-left: 30px;
 }
 .days {
-  font-size: 20px;
+  font-size: 25px;
   padding: 0 15px;
+  margin-top: 18px;
 }
 .card-text {
   text-align: center;

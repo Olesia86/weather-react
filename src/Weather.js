@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./styles.css";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 
 
@@ -47,7 +48,8 @@ export default function Weather(props) {
             onChange={handleCitySearch} id="search-text-bar" />
           <input type="submit" className="button" value="Search" />
           </form >
-          <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData} />
+        <Forecast coordinates={weatherData.coordinates} />
    </div>
     );
   }
