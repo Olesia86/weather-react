@@ -29,7 +29,7 @@ export default function Forecast(props) {
           <div className="col-2" id="col">
             <div className="card">
               <div className="card-body">
-                <h6 className="card-title">{day()}</h6>
+                <h6 className="card-title">{day}</h6>
                 <p className="card-text">{forecast[0].weather[0].description}</p>
                 <p className="temp">{Math.round(forecast[0].temp.day)}°C</p>
                 <p>
