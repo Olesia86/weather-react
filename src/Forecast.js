@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState, useEffect }   from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./styles.css";
 import axios from "axios";
@@ -7,13 +7,18 @@ import axios from "axios";
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+   
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
   
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
   function day() {
-    let date = new Date(props.data.dt[0] * 1000);
+    let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   
